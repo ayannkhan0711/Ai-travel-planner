@@ -1,0 +1,30 @@
+{
+  "name": "voyager-luxe",
+  "version": "1.0.0",
+  "description": "Voyager Luxe - Premium AI Travel Aggregator Platform",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node server/scripts/seedData.js",
+    "build:client": "npm run build --prefix client"
+  },
+  "keywords": [
+    "travel",
+    "luxury",
+    "aggregator",
+    "amadeus",
+    "rome2rio",
+    "booking",
+    "itinerary",
+    "mern"
+  ],
+  "author": "Voyager Luxe Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}

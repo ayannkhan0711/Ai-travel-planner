@@ -1,0 +1,43 @@
+@import './animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAFAF8] text-[#2D2D2D] font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight text-[#2D2D2D];
+  }
+}
+
+@layer components {
+  /* Luxury Button Classes */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-luxury-brown hover:bg-luxury-brownDark text-white font-medium shadow-sm transition-all duration-300 hover:shadow-luxury hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gold-gradient hover:opacity-95 text-white font-semibold shadow-luxury transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl border border-luxury-brown text-luxury-brown hover:bg-luxury-beigeLight font-medium transition-all duration-300 hover:-translate-y-0.5;
+  }
+
+  /* Luxury Card Classes */
+  .luxury-card {
+    @apply bg-white border border-[#F5E6D3] rounded-2xl shadow-luxury hover:shadow-luxury-hover transition-all duration-300;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-[#F5E6D3]/60 rounded-2xl shadow-luxury;
+  }
+
+  .badge-gold {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-[#FFFAF0] text-luxury-brown border border-luxury-beige;
+  }
+}
